@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MyToDoApp</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= form_for(@todo) do |f| %>
+	<%= f.label :item %>
+	<%= f.text_field :item %>
+
+<%= yield %>
+
+</body>
+</html>
