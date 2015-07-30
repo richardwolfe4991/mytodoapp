@@ -1,0 +1,8 @@
+<title>List Index</title>
+<h1>List Index</h1>
+<p>All of your lists display here</p>
+
+<% @list_array.each do |t|%>
+  <li> <%= link_to t.item, list_path(t) %> </li>
+<% end %>
+	
