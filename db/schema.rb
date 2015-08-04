@@ -11,16 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150730193846) do
+ActiveRecord::Schema.define(:version => 20150730235532) do
 
-  create_table "items", :force => true do |t|
+  create_table "Items", :force => true do |t|
     t.string   "Item_name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "list_id"
   end
 
-  create_table "lists", :force => true do |t|
-    t.string   "item"
+  add_index "Items", ["list_id"], :name => "index_Items_on_list_id"
+
+  create_table "Lists", :force => true do |t|
+    t.string   "list_name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

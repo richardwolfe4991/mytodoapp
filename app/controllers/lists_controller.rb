@@ -5,6 +5,7 @@ class ListsController < ApplicationController
 	end
 
 	def show
-		@list_array = List.find(params[:id]) 
+		@list_view = List.find(params[:id]) 
+		@item_array = Item.where(["list_id = :list_id", {list_id: List.find(params[:id])}])
 	end
 end

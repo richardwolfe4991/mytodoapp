@@ -1,4 +1,8 @@
 <title>List</title>
-<p>List Items will show here</p>
+<h1><%= @list_view.list_name %></h1>
 
-<%= @list_array.id %>
+<% @item_array.each do |t|%>
+  <li> <%= t.Item_name %> </li>
+<% end %>
+
+<%= button_to "Back", root_path, :class => "button" %>

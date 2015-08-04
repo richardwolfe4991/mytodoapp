@@ -1,3 +1,3 @@
 class List < ActiveRecord::Base
-  attr_accessible :item
+  attr_accessible :list_name
 end

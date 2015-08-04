@@ -3,6 +3,6 @@
 <p>All of your lists display here</p>
 
 <% @list_array.each do |t|%>
-  <li> <%= link_to t.item, list_path(t) %> </li>
+  <li> <%= link_to t.list_name, list_path(t) %> </li>
 <% end %>
 	
