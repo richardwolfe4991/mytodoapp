@@ -5,4 +5,5 @@
 <% @list_array.each do |t|%>
   <li> <%= link_to t.list_name, list_path(t) %> </li>
 <% end %>
-	
+<br/>
+<%= link_to "Create New List", new_list_path %>

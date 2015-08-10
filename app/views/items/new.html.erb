@@ -1,0 +1,8 @@
+<h1>Create New Item</h1>
+
+<%= form_for [@list, @item] do |f| -%>
+ Item Name: <%= f.text_field :Item_name %><br/>
+  			<%= f.submit %>
+<% end -%>
+
+<%= link_to "Cancel", lists_path, :class => "button" %>

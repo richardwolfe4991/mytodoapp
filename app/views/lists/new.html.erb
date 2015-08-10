@@ -1,0 +1,8 @@
+<h1>Create New List</h1>
+
+<%= form_for @list do |f| -%>
+ List Name: <%= f.text_field :list_name %><br/>
+  			<%= f.submit %>
+<% end -%>
+
+<%= link_to "Cancel", root_path, :class => "button" %>

@@ -4,5 +4,9 @@
 <% @item_array.each do |t|%>
   <li> <%= t.Item_name %> </li>
 <% end %>
-
-<%= button_to "Back", root_path, :class => "button" %>
+<br/>
+<%= link_to "Rename List", edit_list_path %>
+<%= link_to "Add Items to List", new_list_item_path(:list_id => @list_view.id) %>
+<%= link_to "Back", root_path, :class => "button" %>
+<br/>
+<%= button_to "Destroy List", @list_view, :method => :delete %>

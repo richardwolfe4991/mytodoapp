@@ -1,0 +1,9 @@
+<h1>Edit Current List</h1>
+
+<%= form_for @list do |f| -%>
+ <%= f.label :list_name %>
+ <%= f.text_field :list_name %><br/>
+  			<%= f.submit "Save Changes" %>
+<% end -%>
+
+<%= link_to "Cancel", list_path %>
