@@ -1,6 +1,10 @@
 <title>Items Show</title>
-<h1>Items Show</h1>
+<h1>Show Item</h1>
 
+<li> <%= @item_view.Item_name %> </li>
 
-
-	
+<%= link_to "Edit Item", edit_list_item_path %>
+<br/>
+<%= link_to "Back", list_path(@item_view.list_id) %>
+<br/>
+<%= link_to "Delete", list_item_path(@item_view), :method => :delete %>

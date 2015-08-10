@@ -1,0 +1,10 @@
+<h1>Edit Current Item</h1>
+
+<%= form_for @item, url: list_item_path do |t| -%>
+ <%= t.label :Item_name %>
+ <%= t.text_field :Item_name %><br/>
+ <%= t.collection_select(:list_id, List.all, :id, :list_name) %>
+  			<%= t.submit "Save Changes" %>
+<% end -%>
+
+<%= link_to "Cancel", list_item_path %>

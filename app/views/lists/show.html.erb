@@ -2,11 +2,12 @@
 <h1><%= @list_view.list_name %></h1>
 
 <% @item_array.each do |t|%>
-  <li> <%= t.Item_name %> </li>
+  <li> <%= link_to t.Item_name, list_item_path(@list_view.id, t) %> </li>
 <% end %>
 <br/>
 <%= link_to "Rename List", edit_list_path %>
 <%= link_to "Add Items to List", new_list_item_path(:list_id => @list_view.id) %>
+<br/>
 <%= link_to "Back", root_path, :class => "button" %>
 <br/>
 <%= button_to "Destroy List", @list_view, :method => :delete %>

@@ -17,6 +17,31 @@ class ItemsController < ApplicationController
 		end
 	end
 
+	def edit
+		@list = List.find(params[:list_id])
+		@item = Item.find(params[:id])
+	end
+
+	def update
+		@list = List.find(params[:list_id])
+		@item = Item.find(params[:id])
+		if @item.update_attributes(params[:item])
+			redirect_to list_item_path
+		else 
+			redirect_to edit_list_item_path
+		end
+	end
+
 	def show
+		@list = List.find(params[:list_id])
+		@item_view = Item.find(params[:id])
+	end
+
+
+	def destroy
+		@list = List.find(params[:list_id])
+		@item = Item.find(params[:id])
+		@item.destroy
+		redirect_to list_path
 	end
 end
