@@ -1,4 +1,4 @@
-<h1>My Todo Lists</h1>
+<h1>My Lists</h1>
 <ul class="list-group">
 	<% @list_array.each do |t|%>
 	  <li class="list-group-item"> <%= link_to t.list_name, list_path(t) %> </li>

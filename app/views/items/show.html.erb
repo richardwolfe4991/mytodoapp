@@ -4,4 +4,4 @@
 <%= link_to "Edit Item", edit_list_item_path, class: 'btn btn-info' %>
 <%= link_to "Go Back", list_path(@item_view.list_id), class: 'btn btn-default' %>
 <hr/>
-<%= button_to "Delete Item", list_item_path(@item_view), class: 'btn btn-danger', :method => :delete %>
+<%= button_to "Delete Item", list_item_path(@list, @item_view), class: 'btn btn-danger', :method => :delete %>
