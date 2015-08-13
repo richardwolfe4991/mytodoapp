@@ -1,7 +1,7 @@
 <title>Items Show</title>
-<h1><%= @item_view.Item_name %></h1>
+<h1><%= @item.Item_name %></h1>
 <br/>
 <%= link_to "Edit Item", edit_list_item_path, class: 'btn btn-info' %>
-<%= link_to "Go Back", list_path(@item_view.list_id), class: 'btn btn-default' %>
+<%= link_to "Go Back", list_path(@item.list_id), class: 'btn btn-default' %>
 <hr/>
-<%= button_to "Delete Item", list_item_path(@list, @item_view), class: 'btn btn-danger', :method => :delete %>
+<%= button_to "Delete Item", list_item_path(@list, @item), class: 'btn btn-danger', :method => :delete %>

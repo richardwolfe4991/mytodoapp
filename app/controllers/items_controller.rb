@@ -34,7 +34,7 @@ class ItemsController < ApplicationController
 
 	def show
 		@list = List.find(params[:list_id])
-		@item_view = Item.find(params[:id])
+		@item = Item.find(params[:id])
 	end
 
 
@@ -43,6 +43,6 @@ class ItemsController < ApplicationController
 		@item = Item.find(params[:id])
 		@item.list_id = @list.id
 		@item.destroy
-		redirect_to list_path(:id => 1)
+		redirect_to list_path(:id => @list.id)
 	end
 end

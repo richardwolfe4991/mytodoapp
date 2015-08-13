@@ -1,7 +1,7 @@
 class ListsController < ApplicationController
 
 	def index
-		@list_array = List.all
+		@lists = List.all
 	end
 
 	def new
@@ -31,13 +31,15 @@ class ListsController < ApplicationController
 	end
 
 	def destroy
-		@list_destroy = List.find(params[:id]).destroy
+		@list = List.find(params[:id])
+		@list.destroy
 		redirect_to root_path
+		return
 	end
 
 
 	def show
-		@list_view = List.find(params[:id]) 
-		@item_array = Item.where(["list_id = :list_id", {list_id: List.find(params[:id])}])
+		@list = List.find(params[:id]) 
+		@items = Item.where(["list_id = :list_id", {list_id: List.find(params[:id])}])
 	end
 end
