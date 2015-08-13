@@ -2,7 +2,7 @@
 
 <%= form_for @list do |f| -%>
  List Name: <%= f.text_field :list_name %><br/>
-  			<%= f.submit %>
+  			<%= f.submit "Create", class: 'btn btn-success' %>
 <% end -%>
-
-<%= link_to "Cancel", root_path, :class => "button" %>
+<hr/>
+<%= link_to "Cancel", root_path, class: 'btn btn-default' %>

@@ -3,7 +3,7 @@
 <%= form_for @list do |f| -%>
  <%= f.label :list_name %>
  <%= f.text_field :list_name %><br/>
-  			<%= f.submit "Save Changes" %>
+  			<%= f.submit "Save Changes", class: 'btn btn-success' %>
 <% end -%>
 
-<%= link_to "Cancel", list_path %>
+<%= link_to "Cancel", list_path, class: 'btn btn-default' %>

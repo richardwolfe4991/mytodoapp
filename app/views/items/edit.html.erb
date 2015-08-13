@@ -4,7 +4,7 @@
  <%= t.label :Item_name %>
  <%= t.text_field :Item_name %><br/>
  <%= t.collection_select(:list_id, List.all, :id, :list_name) %>
-  			<%= t.submit "Save Changes" %>
+  			<%= t.submit "Save Changes", class: 'btn btn-success' %>
 <% end -%>
 
-<%= link_to "Cancel", list_item_path %>
+<%= link_to "Cancel", list_item_path, class: 'btn btn-default' %>
